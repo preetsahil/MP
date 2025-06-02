@@ -306,7 +306,7 @@ const LoginSignup = ({ Login }) => {
                 className="mt-6 space-y-4 flex flex-col"
               >
                 <div className="flex justify-center space-x-4 mb-4">
-                  {["Student", "Recruiter", "Professor"].map((type) => {
+                  {["Student", "Recruiter"].map((type) => {
                     const displayText = {
                       Student: "Student",
                       Recruiter: "Company",
