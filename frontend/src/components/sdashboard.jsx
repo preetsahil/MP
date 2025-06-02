@@ -119,7 +119,7 @@ const StudentDashboard = () => {
     // },
 /*     { path: "/sdashboard/policy-guidlines", label: "Policy & Guidlines", icon: faNoteSticky },
 /*     { path: "/sdashboard/resume", label: "Resume", icon: faNoteSticky }, */
-    { path: "/sdashboard/change-pass", label: "Change Password", icon: faHammer },
+    // { path: "/sdashboard/change-pass", label: "Change Password", icon: faHammer },
   ];
 
   const MenuItem = ({ item, onClick, isSidebarExpanded }) => {
@@ -297,8 +297,8 @@ const StudentDashboard = () => {
         <div className="container mx-auto p-4 min-h-[calc(100vh-theme(spacing.16)-theme(spacing.16))]">
           {/* Placeholder for route content */}
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="home" element={<Home />} />
+            <Route path="/" element={<JobApplications />} />
+            <Route path="home" element={<JobApplications />} />
             <Route path="job-application" element={<JobApplications />} />
             <Route path="oa" element={<OnlineAssessment />} />
             <Route path="interviews" element={<Interviews />} />

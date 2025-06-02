@@ -284,12 +284,12 @@ const LoginSignup = ({ Login }) => {
                   {isSubmitting ? "Logging in..." : "Login"}
                 </button>
 
-                <p
+                {/* <p
                   className="text-custom-blue cursor-pointer text-sm text-center"
                   onClick={() => navigate("/forgot-password")}
                 >
                   Forgot Password?
-                </p>
+                </p> */}
                 <p className="text-custom-blue text-xs text-center">
                   Already have an account?{" "}
                   <span
