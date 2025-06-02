@@ -763,7 +763,9 @@ export const getJobProfiletostudent = async (req, res) => {
     //   batch = student.batch;
     // }
     let batch=student.batch;
-    console.log(sude)
+    if (!batch) {
+      return res.status(400).json({ message: "batch missing" });
+    }
     const JobProfiles = await JobProfile.find({
       Approved_Status: true,
       'eligibility_criteria.eligible_batch': batch
