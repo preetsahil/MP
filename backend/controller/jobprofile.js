@@ -762,7 +762,8 @@ export const getJobProfiletostudent = async (req, res) => {
     //   console.error("ERP server error, falling back to database batch:", erpError);
     //   batch = student.batch;
     // }
-    let batch=2025;
+    let batch=student.batch;
+    console.log(sude)
     const JobProfiles = await JobProfile.find({
       Approved_Status: true,
       'eligibility_criteria.eligible_batch': batch
