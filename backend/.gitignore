@@ -1,0 +1,10 @@
+# Environment variables
+.env*
+
+# Node.js
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+uploads/
