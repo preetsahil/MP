@@ -762,13 +762,12 @@ export const getJobProfiletostudent = async (req, res) => {
     //   console.error("ERP server error, falling back to database batch:", erpError);
     //   batch = student.batch;
     // }
-    let batch=student.batch;
-    if (!batch) {
-      return res.status(400).json({ message: "batch missing" });
-    }
+    // if (!batch) {
+    //   return res.status(400).json({ message: "batch missing" });
+    // }
     const JobProfiles = await JobProfile.find({
       Approved_Status: true,
-      'eligibility_criteria.eligible_batch': batch
+      'eligibility_criteria.eligible_batch': 2025
   });
   
     const applied = [];
@@ -1240,7 +1239,7 @@ export const checkEligibility = async (req, res) => {
       let currentIneligibilityReason = '';
 
       // Check eligibility in the defined order
-      if (eligible_batch && eligible_batch !== updatedStudent.batch) {
+      if (eligible_batch && eligible_batch !== 2025) {
         currentFailureDepth = 0; // Batch check failed
         currentIneligibilityReason = checkOrder[0].reason;
       } else if (course_allowed && course_allowed !== updatedStudent.course) {
